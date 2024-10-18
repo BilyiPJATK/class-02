@@ -20,6 +20,10 @@ class SimpleNumericalOperations{
     @Test
         public void testAddition() {
         assertEquals(3, add(2,1));
+        assertEquals(-1, add(-2,1));
+        assertEquals(5, add(5,0));
+        assertEquals(5, add(0,5));
+        assertEquals(-2, add(-1,-1));
     }
 
     @Test

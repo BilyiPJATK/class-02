@@ -1,16 +1,23 @@
 package task02;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class CplxTest {
 
-    private Cplx cplx;
+    private static Cplx cplx;
 
     @BeforeEach
     public void setup() {
         cplx = new Cplx(2, 3);
+    }
+
+    @AfterEach
+    public void finalizer() {
+        cplx = null;
+        System.gc();
     }
 
     @Test
